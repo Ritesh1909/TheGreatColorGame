@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
 body {
 	margin: 0;
 	font-family: "Montserrat", "Avenir";
@@ -8,10 +10,10 @@ body {
 .square {
 	width: 30%;
 	background: purple;
-	padding-bottom: 30%;
+	padding-bottom: 28%;
 	float: left;
 	margin: 1.66%;
-	border-radius: 15%;
+	border-radius: 5%;
 	transition: background 0.6s;
 	-webkit-transition: background 0.6s;
 	-moz-transition: background 0.6s;
@@ -27,10 +29,22 @@ h1 {
 	line-height: 1.1;
 	font-weight: normal;
 	color: white;
-	background: steelblue;
+	background: MediumPurple;
 	margin: 0;
 	text-transform: uppercase;
 	padding: 20px 0;
+}
+
+#heading {
+	text-align: center;
+	line-height: 1.1;
+	font-family: 'Russo One', sans-serif;
+	font-size: 100px;
+	font-weight: normal;
+	color: white;
+	margin: 10px;
+	text-transform: uppercase;
+	padding-top: 110px;
 }
 
 #colorDisplay {
@@ -51,7 +65,7 @@ h1 {
 
 .selected {
 	color: white;
-	background: steelblue;
+	background: MediumPurple ;
 }
 
 button {
@@ -60,7 +74,7 @@ button {
 	text-transform: uppercase;
 	height: 100%;
 	font-weight: 700;
-	color: steelblue;
+	color: RoyalBlue  ;
 	letter-spacing: 1px;
 	font-size: inherit;
 	transition: all 0.3s;
@@ -71,5 +85,68 @@ button {
 
 button:hover {
 	color: white;
-	background: steelblue;
+	background: MediumPurple ;
+}
+
+.subline {
+	text-align: center;
+	line-height: 1.1;
+	font-size: 30px;
+	font-weight: normal;
+	color: #80dfff;
+	margin: 0;
+	padding: 20px 0;
+	background: black;
+}
+
+#btn {
+	text-align: right;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+}
+
+#borderRound {
+	border-radius: 25px;
+    border: 2px solid #80dfff;
+  	padding: 20px;
+  	width: auto;
+    height: auto;
+    background: black;
+}
+
+.background {
+	border-radius: 25px;
+    border: 2px solid #80dfff;
+    background: black;
+  	padding-top: 20px;
+  	width: 500px;
+    height: 400px;
+    margin: auto;
+    margin-top:150px;
+}
+
+h2 {
+	text-align: center;
+	line-height: 1.1;
+	font-family: 'Russo One', sans-serif;
+	font-size: 60px;
+	font-weight: normal;
+	color: white;
+	margin: 40px;
+	text-transform: uppercase;
+}
+
+#scorer {
+	text-align: center;
+	font-family: 'Russo One', sans-serif;
+	font-size: 30px;
+	color: white;
+}
+
+#high {
+	text-align: center;
+	font-family: 'Russo One', sans-serif;
+	font-size: 30px;
+	color: white;
 }

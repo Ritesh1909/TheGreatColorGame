@@ -1,4 +1,7 @@
 var numSquares = 6;
+var flag = 0;
+var streak = 0;
+var HighScore = 0;
 var colors = [];
 var pickedColor;
 var squares = document.querySelectorAll(".square");
@@ -7,6 +10,8 @@ var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#reset");
 var modeButtons = document.querySelectorAll(".mode");
+var scorer = document.querySelector("#scorer");
+var HighScorer = document.querySelector("#high");
 
 
 init();
@@ -44,7 +49,20 @@ function setupSquares(){
 			} else {
 				this.style.background = "#232323";
 				messageDisplay.textContent = "Try Again"
+				streak = 0;
+				flag=0;
+				scorer.textContent = "Streak: " + streak
 			}
+			if(flag === 1){
+				streak = streak + 1;
+				scorer.textContent = "Streak: " + streak
+				flag=0;
+			}
+			if(HighScore < streak){
+					HighScore = streak;
+					HighScorer.textContent = "Your Highest Score: " + HighScore
+			}
+
 		});
 	}
 }
@@ -52,6 +70,7 @@ function setupSquares(){
 
 
 function reset(){
+	flag = 1;
 	colors = generateRandomColors(numSquares);
 	//pick a new random color from array
 	pickedColor = pickColor();
@@ -68,7 +87,7 @@ function reset(){
 			squares[i].style.display = "none";
 		}
 	}
-	h1.style.background = "steelblue";
+	h1.style.background = "MediumPurple ";
 }
 
 resetButton.addEventListener("click", function(){
@@ -109,4 +128,5 @@ function randomColor(){
 	var b = Math.floor(Math.random() * 256);
 	return "rgb(" + r + ", " + g + ", " + b + ")";
 }
+
 
